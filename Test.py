@@ -1,3 +1,3 @@
-cijfers = {"0": "10", "1": "20"}
-cijfers["2"] = "30"
-print(cijfers)
+test = {1: "boter", 2: "kaas", 3: "eieren"}
+del test[3]
+print(test)
