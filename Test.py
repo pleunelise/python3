@@ -1,8 +1,5 @@
-def max_of_three(x,y,z):
-    Max = x
-    if y > Max:
-        Max = y
-    if z > Max:
-        Max =z
-    print(Max)
-max_of_three(10, 89, 5)
+def reverse(string):
+    string = string[::-1]
+    return string
+s = input("Welk woord/zin wil je achterste voren printen?")
+print(reverse(s))
