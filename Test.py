@@ -1,12 +1,8 @@
-def priem(num):
-    if num > 1:
-       for i in range(2,num):
-           if (num % i) == 0:
-               print(False)
-               break
-       else:
-           print(True)
+def palindrome(string):
+    if string == string[::-1]:
+        return string
+        print(True)
 
     else:
-       print(False)
-print(priem(893))
+        print(False)
+print(palindrome('hallo'))
