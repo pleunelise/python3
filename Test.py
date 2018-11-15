@@ -1,4 +1,7 @@
-def som(a,b,c,d,e,f,):
-    antw = a + b + c + d + e + f
-    print(antw)
-print(som(89,25,17,33,46,1))
+def gen(n):
+    n += 1
+    d = {}
+    for i in range(n):
+        d[i] = i*i
+    print(d)
+gen(5)
