@@ -35,6 +35,7 @@ def main():
             opslaan()
         else:
             print("ERROR")
+        ant = input("Toets het getal in dat je wilt uitvoeren:")
 
 def overzicht_producten():
     print_schermbreedte()
@@ -64,8 +65,9 @@ def winkelen():
     prijs = 0
     while prijs < 100:
         product = input("welk product wil je kopen?")
-        if (product == 'm'):
+        if (product == 's'):
             print("Totaal:", prijs, "euro")
+            main()
         if product in boodschappen:
             prijs += boodschappen[product]
 
