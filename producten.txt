@@ -1,0 +1,1 @@
+{'brood': 2, 'water': 1, 'sap': 3, 'melk': '3'}

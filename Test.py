@@ -35,6 +35,7 @@ def main():
             opslaan()
         else:
             print("ERROR")
+        print_schermbreedte()
         ant = input("Toets het getal in dat je wilt uitvoeren:")
 
 def overzicht_producten():
@@ -46,7 +47,7 @@ def overzicht_producten():
 def add_product():
     print_schermbreedte()
     key = input("Naam product:")
-    value = input("Prijs product:")
+    value = int(input("Prijs product:"))
     boodschappen[key] = value
 
 def del_product():
@@ -63,18 +64,19 @@ def wijzig_product():
 def winkelen():
     print_schermbreedte()
     prijs = 0
-    while prijs < 100:
-        product = input("welk product wil je kopen?")
-        if (product == 's'):
-            print("Totaal:", prijs, "euro")
-            main()
+    product = input("welk product wil je kopen?")
+    while product != 's':
         if product in boodschappen:
             prijs += boodschappen[product]
+        product = input("welk product wil je kopen?")
+
+    print("Totaal:", prijs, "euro")
 
 def opslaan():
     print_schermbreedte()
     f = open('producten.txt', 'w')
     f.write(str(boodschappen))
     f.close()
+    print("Boodschappen als .txt bestand opgelagen")
 
 main()
